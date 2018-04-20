@@ -71,7 +71,7 @@ For an overview of useful commands in the tools used in OS, see the
 <h3>Test Your Compiler Toolchain</h3>
 
 <p>Modern Linux and BSD UNIX distributions already
-provide a toolchain suitable for 6.828.  To test your
+provide a toolchain suitable for JOS.  To test your
 distribution, try the following commands:</p>
 
 <pre class='samp'>
@@ -298,13 +298,12 @@ export LD_LIBRARY_PATH=$HOME/lib:$LD_LIBRARY_PATH
 <h2 id="qemu">QEMU Emulator</h2>
 
 <p><a href="http://www.nongnu.org/qemu/">QEMU</a> is a modern and fast
-PC emulator.  QEMU version 2.3.0 is set up on Athena for x86 machines
-in the 6.828 locker (<tt>add -f 6.828</tt>)</p>
+PC emulator.</p>
 
 <p>Unfortunately, QEMU's debugging facilities, while powerful, are
 somewhat immature, so we highly recommend you use our patched version
 of QEMU instead of the stock version that may come with your
-distribution.  The version installed on Athena is already patched.
+distribution.  The version installed on the provided VM is already patched.
 To build your own patched version of QEMU:</p>
 
 <!-- Note to staff:
@@ -314,10 +313,10 @@ To build your own patched version of QEMU:</p>
 -->
 
 <ol>
-<li> Clone the IAP 6.828 QEMU git repository
+<li> Clone the IAP JOS QEMU git repository
  <code>git clone http://web.mit.edu/ccutler/www/qemu.git -b 6.828-2.3.0</code></li>
 <li> On Linux, you may need to install several libraries. We have successfully
-built 6.828 QEMU on Debian/Ubuntu 16.04 after installing the following packages: libsdl1.2-dev, libtool-bin, libglib2.0-dev, libz-dev, and libpixman-1-dev.</li>
+built JOS QEMU on Debian/Ubuntu 16.04 after installing the following packages: libsdl1.2-dev, libtool-bin, libglib2.0-dev, libz-dev, and libpixman-1-dev.</li>
 <li> Configure the source code (optional arguments are shown in square brackets; replace PFX with a path of your choice)
 
 <ol>
