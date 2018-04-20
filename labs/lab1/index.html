@@ -9,7 +9,7 @@
 <body>
 <h1>Lab 1: Booting a PC</h1>
 <p>
-<b>Handed out Wednesday, September 6, 2017<br />
+<b>Handed out Wednesday, September 6, 2018<br />
 Due Thursday, September 14, 2017</b>
 
 </p>
@@ -72,10 +72,10 @@ to checkpoint your progress, you can <i>commit</i> your changes
 by running:
 </p>
 <pre>
-athena% <kbd>git commit -am 'my solution for lab1 exercise 9'</kbd>
+$ <kbd>git commit -am 'my solution for lab1 exercise 9'</kbd>
 Created commit 60d2135: my solution for lab1 exercise 9
  1 files changed, 1 insertions(+), 0 deletions(-)
-athena% 
+$
 </pre>
 
 <p>
@@ -87,12 +87,6 @@ Here, <tt>origin/lab1</tt> is the name of the git branch with the
 initial code you downloaded from our server for this assignment.
 </p>
 
-<p>We have set up the appropriate compilers and simulators for you on
-Athena.  To use them, run <kbd>add -f 6.828</kbd>.  You must run this
-command every time you log in (or add it to your
-<tt>~/.environment</tt> file).  If you get obscure errors while
-compiling or running <tt>qemu</tt>, double check that you added the
-course locker.</p>
 
 <!-- XXX We might not actually *need* any QMEU patches any more if we
      switch to the E1000, though some of the debugging ones will still
@@ -110,6 +104,16 @@ directions on the tools page.
 
 <h3>Hand-In Procedure</h3>
 
+<p><b>Grading: Code (50%), Answers (10%), Description (10%), Interview (30%)</b></p>
+<p>For lab 1, you should give answers to the 10 questions after “Exercise 3” and “Exercise 8”. Write them
+    down to answers.txt and save it in the lab directory.</p>
+<p>You also need to write a description about the procedure of the booting up. What difficulties did you
+meet during this lab and how you conquered them. Please describe as many details as you can to get a
+    higher mark.</p>
+<p>When you are ready to hand in your lab, run command tar cvzf {YourStudentId}.tar.gz lab in
+the ~/os directory, then you can upload it to our
+    ftp://10.132.141.33/classes/15/151操作系统/WORK_UPLOAD/lab1.</p>
+
 <p>
 You will turn in your assignments using the <a
 href="https://6828.scripts.mit.edu/2017/handin.py/">submission website</a>.
@@ -118,64 +122,9 @@ in any assignments or labs.
 </p>
 
 <p>
-The lab code comes with GNU Make rules to make submission easier. After
-committing your final changes to the lab, type <kbd>make handin</kbd> to submit
-your lab.
-<pre>
-athena% <kbd>git commit -am "ready to submit my lab"</kbd>
-[lab1 c2e3c8b] ready to submit my lab
- 2 files changed, 18 insertions(+), 2 deletions(-)
-
-athena% <kbd>make handin</kbd>
-git archive --prefix=lab1/ --format=tar HEAD | gzip &gt; lab1-handin.tar.gz
-Get an API key for yourself by visiting https://6828.scripts.mit.edu/2017/handin.py/
-Please enter your API key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 50199  100   241  100 49958    414  85824 --:--:-- --:--:-- --:--:-- 85986
-athena%
-</pre>
-<kbd>make handin</kbd> will store your API key in <i>myapi.key</i>. If you need
-to change your API key, just remove this file and let <kbd>make handin</kbd>
-generate it again (<i>myapi.key</i> must not include newline characters).
-</p>
-
-<p>
-If use <kbd>make handin</kbd> and you have either uncomitted changes or
-untracked files, you will see output similar to the following:
-<pre>
- M hello.c
-?? bar.c
-?? foo.pyc
-Untracked files will not be handed in.  Continue? [y/N]
-</pre>
-Inspect the above lines and make sure all files that your lab solution needs
-are tracked i.e. not listed in a line that begins with <kbd>??</kbd>.
-</p>
-
-<p>
-In the case that <kbd>make handin</kbd> does not work properly, 
-try fixing the problem with the curl or Git commands.
-Or you can run <kbd>make tarball</kbd>.
-This will make a tar file for you, which you can
-then upload via our 
-<a href="https://6828.scripts.mit.edu/2017/handin.py/">web interface</a>.
-</p>
-
-<p>
 You can run <kbd>make grade</kbd>
-to test your solutions with the grading program. The <a
-href="https://6828.scripts.mit.edu/2017/handin.py/">web interface</a> uses the
-same grading program to assign your lab submission a grade. You should check
-the output of the grader (it may take a few minutes since the grader runs
-periodically) and ensure that you received the grade which you expected. If the
-grades don't match, your lab submission probably has a bug -- check the output
-of the grader (resp-lab*.txt) to see which particular test failed.
-</p>
-
-<p>
-For Lab 1, you do not need to turn in answers to any of the questions below.
-(Do answer them for yourself though!  They will help with the rest of the lab.)
+to test your solutions with the grading program. We uses the
+same grading program to assign your lab submission a grade.
 </p>
 
 <h2>Part 1: PC Bootstrap</h2>
@@ -1616,29 +1565,3 @@ type <kbd>make handin</kbd> to submit your code.
 
 <!-- Mirrored from pdos.csail.mit.edu/6.828/2017/labs/lab1/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Apr 2018 06:48:38 GMT -->
 </html>
-
-<!--  LocalWords:  GCC Bochs JOS athena cd wget gtar xzvf uname ssh bochs gcc
- -->
-<!--  LocalWords:  gmake handin NASM Brennan's Inline IA AMD quirky QEMU kern
- -->
-<!--  LocalWords:  cc lib ld obj Os mk CVS bochsrc txt fff unk ctxt jmp ea cont
- -->
-<!--  LocalWords:  slist stepi modebp vbreak lbreak pb pbreak sb sba blist bpe
- -->
-<!--  LocalWords:  bpd del xp disas reg setpmem crc cpu ptime unwatch calc XXX
- -->
-<!--  LocalWords:  backtrace kerninfo virt phys etext edata bc img CTRL BIOS Wo
- -->
-<!--  LocalWords:  updateable PCI Storrs Plex VGABios bootable ROMs Torito IDE
- -->
-<!--  LocalWords:  GNUmakefile loader's addr bootmain readsect mkisofs Jensen
- -->
-<!--  LocalWords:  Linkable inc int jos objdump gdb xorw BIOS's Ttext Makefrag
- -->
-<!--  LocalWords:  fpic GDT printf printfmt crt pos memcpy buf COLS sizeof uint
- -->
-<!--  LocalWords:  GCC's cprintf endian esp ebp vb mon eip args i'th qemu QEMU's
- -->
-<!--  LocalWords:  GDB's disassembly breakpoint
--->
-
