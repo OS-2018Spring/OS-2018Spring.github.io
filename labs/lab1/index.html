@@ -2,7 +2,7 @@
 
 <!-- Mirrored from pdos.csail.mit.edu/6.828/2017/labs/lab1/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 20 Apr 2018 06:48:27 GMT -->
 <head>
-<title>6.828 Fall 2017 Lab 1: PC Bootstrap and GCC Calling Conventions</title>
+<title>OS Spring 2018 Lab 1: PC Bootstrap and GCC Calling Conventions</title>
 <link rel="stylesheet" href="../labs.css" type="text/css" />
 <script type="text/javascript" src="../labs.js"></script>
 </head>
@@ -44,23 +44,25 @@ overview of Git</a> useful.
 
 <p>
 The URL for the course Git repository is
-<a href="../../jos.git/index.html">https://pdos.csail.mit.edu/6.828/2017/jos.git</a>.
-To install the files in your Athena account, you need to <i>clone</i> the
+<a href="https://github.com/OS-2018Spring/jos">https://github.com/OS-2018Spring/jos.git</a>.
+To install the files in your environment, you need to <i>clone</i> the
 course repository, by running the commands below.
-You must use an x86 Athena machine; that is, <tt>uname -a</tt>
+You must use an x86 machine; that is, <tt>uname -a</tt>
 should mention <tt>i386 GNU/Linux</tt> or <tt>i686 GNU/Linux</tt> or
 <tt>x86_64 GNU/Linux</tt>.
-You can log into a public Athena host with <tt>ssh -X athena.dialup.mit.edu</tt>.
 </p>
 
+<p>We provide <a href="">VMWare virtual machine</a> with pre-configured environment for this lab, but we encourage you to
+run this lab natively in your environment, including Linux, <a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows 10(WSL)</a>,
+    and macOS. For more information about self-configured environment for this lab, see <a href="../../tools.html">Tool Guide</a>.</p>
+
 <pre>
-athena% <kbd>mkdir ~/6.828</kbd>
-athena% <kbd>cd ~/6.828</kbd>
-athena% <kbd>add git</kbd>
-athena% <kbd>git clone https://pdos.csail.mit.edu/6.828/2017/jos.git lab</kbd>
+$ <kbd>mkdir ~/jos</kbd>
+$ <kbd>cd ~/jos</kbd>
+$ <kbd>git clone https://github.com/OS-2018Spring/jos.git lab</kbd>
 Cloning into lab...
-athena% <kbd>cd lab</kbd>
-athena% 
+$ <kbd>cd lab</kbd>
+$
 </pre>
 
 <p>
@@ -95,7 +97,7 @@ course locker.</p>
 <!-- XXX We might not actually *need* any QMEU patches any more if we
      switch to the E1000, though some of the debugging ones will still
      be highly recommended. -->
-<p>If you are working on a non-Athena machine, you'll need to install
+<p>If you are working on a self-configured environment, you'll need to install
 <tt>qemu</tt> and possibly <tt>gcc</tt> following the directions on
 the <a href="../../tools.html">tools page</a>.  We've made several
 useful debugging changes to <tt>qemu</tt> and some of the later labs
